@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" ?><root><mylist type="list"><item type="str">foo</item><item type="str">bar</item><item type="str">baz</item></mylist><mydict type="dict"><foo type="str">bar</foo><baz type="int">1</baz></mydict><ok type="bool">True</ok></root>

@@ -1,0 +1,62 @@
+{
+    "server": {
+        "cluster": {
+            "local-host": "sun1", 
+            "instance": {
+                "host": "sun1"
+            }
+        }, 
+        "log": {
+            "log-file": "../logs/errors", 
+            "log-level": "info"
+        }, 
+        "temp-path": "/tmp/https-sun1-5351d5c9-2", 
+        "user": "myuser", 
+        "jvm": {
+            "java-home": "/opt/webserver7/jdk", 
+            "server-class-path": "/opt/webserver7/lib/webserv-rt.jar:/opt/webserver7/lib/pw\nc.jar:/opt/webserver7/lib/ant.jar:${java.home}/lib/tools.jar:/opt/webserver7/lib\n/ktsearch.jar:/opt/webserver7/lib/webserv-jstl.jar:/opt/webserver7/lib/jsf-impl.\njar:/opt/webserver7/lib/jsf-api.jar:/opt/webserver7/lib/webserv-jwsdp.jar:/opt/w\nebserver7/lib/container-auth.jar:/opt/webserver7/lib/mail.jar:/opt/webserver7/li\nb/activation.jar", 
+            "debug": "false", 
+            "debug-jvm-options": "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,\naddress=7896", 
+            "jvm-options": [
+                "-Djava.security.auth.login.config=login.conf", 
+                "-Djava.util.logging.manager=com.sun.webserver.logging.ServerLog\nManager", 
+                "-Xms128m -Xmx256m"
+            ]
+        }, 
+        "thread-pool": {
+            "max-threads": "128", 
+            "stack-size": "131072"
+        }, 
+        "default-auth-db-name": "keyfile", 
+        "auth-db": {
+            "name": "keyfile", 
+            "url": "file", 
+            "property": [
+                {
+                    "name": "syntax", 
+                    "value": "keyfile"
+                }, 
+                {
+                    "name": "keyfile", 
+                    "value": "keyfile"
+                }
+            ]
+        }, 
+        "acl-file": "default.acl", 
+        "mime-file": "mime.types", 
+        "access-log": {
+            "file": "../logs/access"
+        }, 
+        "http-listener": {
+            "name": "http-listener-1", 
+            "port": "8082", 
+            "server-name": "sun1", 
+            "default-virtual-server-name": "sun1"
+        }, 
+        "virtual-server": {
+            "name": "sun1", 
+            "host": "sun1", 
+            "http-listener-name": "http-listener-1"
+        }
+    }
+}

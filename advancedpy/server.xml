@@ -1,0 +1,75 @@
+<server>
+  <cluster>
+    <local-host>sun1</local-host>
+    <instance>
+      <host>sun1</host>
+    </instance>
+  </cluster>
+
+  <log>
+    <log-file>../logs/errors</log-file>
+    <log-level>info</log-level>
+  </log>
+
+  <temp-path>/tmp/https-sun1-5351d5c9-2</temp-path>
+
+  <user>myuser</user>
+
+  <jvm>
+    <java-home>/opt/webserver7/jdk</java-home>
+    <server-class-path>/opt/webserver7/lib/webserv-rt.jar:/opt/webserver7/lib/pw
+c.jar:/opt/webserver7/lib/ant.jar:${java.home}/lib/tools.jar:/opt/webserver7/lib
+/ktsearch.jar:/opt/webserver7/lib/webserv-jstl.jar:/opt/webserver7/lib/jsf-impl.
+jar:/opt/webserver7/lib/jsf-api.jar:/opt/webserver7/lib/webserv-jwsdp.jar:/opt/w
+ebserver7/lib/container-auth.jar:/opt/webserver7/lib/mail.jar:/opt/webserver7/li
+b/activation.jar</server-class-path>
+    <debug>false</debug>
+    <debug-jvm-options>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,
+address=7896</debug-jvm-options>
+    <jvm-options>-Djava.security.auth.login.config=login.conf</jvm-options>
+    <jvm-options>-Djava.util.logging.manager=com.sun.webserver.logging.ServerLog
+Manager</jvm-options>
+    <jvm-options>-Xms128m -Xmx256m</jvm-options>
+  </jvm>
+
+  <thread-pool>
+    <max-threads>128</max-threads>
+    <stack-size>131072</stack-size>
+  </thread-pool>
+
+  <default-auth-db-name>keyfile</default-auth-db-name>
+
+  <auth-db>
+    <name>keyfile</name>
+    <url>file</url>
+    <property>
+      <name>syntax</name>
+      <value>keyfile</value>
+    </property>
+    <property>
+      <name>keyfile</name>
+      <value>keyfile</value>
+    </property>
+  </auth-db>
+
+  <acl-file>default.acl</acl-file>
+
+  <mime-file>mime.types</mime-file>
+
+  <access-log>
+    <file>../logs/access</file>
+  </access-log>
+
+  <http-listener>
+    <name>http-listener-1</name>
+    <port>8082</port>
+    <server-name>sun1</server-name>
+    <default-virtual-server-name>sun1</default-virtual-server-name>
+  </http-listener>
+
+  <virtual-server>
+    <name>sun1</name>
+    <host>sun1</host>
+    <http-listener-name>http-listener-1</http-listener-name>
+  </virtual-server>
+</server>
