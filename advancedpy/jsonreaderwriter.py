@@ -1,13 +1,15 @@
 import json
 
 # var=open("file.json", 'r')
-a = None
+content_dict = None
 with open ("books.json", 'r') as var:
-	a= json.loads(var.read())
-# print (a['glossary']['title'])
+	content_dict= json.loads(var.read())
+	print (content_dict['book'][0])
+	content_dict['book'][0]['edition']= "fourth"
+	print (content_dict['book'][0])
 var.close()
 # m={'key':'value'}
-with open ("output.json", 'w') as var:
- 	json.dump(a,var, indent=4)
-	print(help(json.dump))
-var.close()
+with open ("output.json", 'w') as outputFO:
+	json.dump(content_dict,outputFO)
+	#print(help(json.dump))
+outputFO.close()

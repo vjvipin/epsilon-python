@@ -7,27 +7,31 @@ class Complex():
     def printcomplex(self):
         print (self.real,"+ i",self.img)
 
-    def __add__(self, other):
-        print ("Within Addition method")
-        real1 = self.real + other.real
-        img1 = self.img + other.img
-        Z = Complex(real1,img1)
-        return Z
-        # return Complex(self.real + other.real,
-        #                self.img + other.img)
-    def __str__(self):
-        # return '%d + i %d' % (self.real, self.img)
-        return str(self.real) + '+ i' + str(self.img) 
+X = Complex(3,4)
 
+X.printcomplex();
 
-    def __sub__(self, other):
-        return Complex(self.real - other.real,
-                       self.img - other.img)
-
-
-    def __mul__(self, other):
-        return Complex(self.real*other.real - self.img*other.img,
-                       self.img*other.real + self.real*other.img)
+#    def __add__(self, other):
+#        print ("Within Addition method")
+#        real1 = self.real + other.real
+#        img1 = self.img + other.img
+#        Z = Complex(real1,img1)
+#        return Z
+#        # return Complex(self.real + other.real,
+#        #                self.img + other.img)
+#    def __str__(self):
+#        # return '%d + i %d' % (self.real, self.img)
+#        return str(self.real) + '+ i' + str(self.img) 
+#
+#
+#    def __sub__(self, other):
+#        return Complex(self.real - other.real,
+#                       self.img - other.img)
+#
+#
+#    def __mul__(self, other):
+#        return Complex(self.real*other.real - self.img*other.img,
+#                       self.img*other.real + self.real*other.img)
 
 '''
     def distance(self,other):

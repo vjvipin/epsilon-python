@@ -1,0 +1,20 @@
+import random
+
+#print(dir(random))
+#print(help(random.uniform))
+#a = random.random()
+#a = random.randrange(5,30)
+#a = random.randint(5,30)
+random.seed(5)
+a = random.randint(5,30)
+print(a)
+l = [2,3,1,34,56]
+#print(random.choice(l))
+print(random.shuffle(l))
+print(l)
+#print(random.uniform(3,90))
+l = list(range(1,1000))
+print(l)
+random.shuffle(l)
+print(l)
+#l = random.randrange(1,1000)

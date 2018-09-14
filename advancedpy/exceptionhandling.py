@@ -1,32 +1,34 @@
 #exceptions:
-#a = 1
+a = [1]
 try :
-	print a
+	print(a)
+	raise (NameError) 
 
-#except NameError:
-#	print 'this is a name error'
+except NameError:
+	print('this is a name error')
 
 except ValueError:
-	print 'this is a value error'
+	print ('this is a value error')
 
+except IndexError:
+	print ('this is an index  error')
 except :
-	print 'this is a generic error'
+	print ('this is a generic error')
 
 else:
-	print 'this is else block'
+	print ('this is else block : There is no error')
 
 finally:
-	print 'this is finally: will be printed everytime'
-
+	print ('this is finally: will be printed everytime')
 #assertion
-def func(a):
-	assert a>0
-	print a
+def func(a,b):
+	assert b != 0
+	print(a/b)
+#	print (a)
 
-func(-1)
-
+func(2,1)
 # creating your own exception
-
+'''
 class myException(RuntimeError):
 	def __init__(self, arg):
 		self.arg=arg
@@ -40,4 +42,4 @@ try:
 		raise myException(b)
 except myException, e:
 	print("raised an exception with value = ", e.arg)
-
+'''
