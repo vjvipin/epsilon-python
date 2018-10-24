@@ -6,11 +6,13 @@ import json
 
 with open ("server.xml", 'r') as var:
 	a=xmltodict.parse(var.read())
-	print (a['server'])
+	print (a['server']['log']["log-level"])
+	print(type(a))
+	a['server']['log']["log-level"] = "trace"
 
-	with open ("outxmlfileforserver.json", 'w') as jsonfile:
-        	json.dump(a,jsonfile,indent=4)
-	jsonfile.close()
+#	with open ("outxmlfileforserver.json", 'w') as jsonfile:
+#        	json.dump(a,jsonfile,indent=4)
+#	jsonfile.close()
 
 	xml = str(dicttoxml.dicttoxml(a))
 	with open ("outxmlfile.xml", 'w') as xmlout:

@@ -1,0 +1,28 @@
+import re
+
+'''
+s2 = "+91-6123456789"
+# s2 = "6123456789"
+
+r2 = re.compile("^(\+91-)?([6-9][0-9]{9})$")
+
+m = re.search(r2,s2)
+if m:
+    print(m.group(0))
+    print(m.group(1))
+    print(m.group(2))
+else:
+    print("Invalid number")
+
+
+'''
+s5 = "Shop online at http://www.amazon.com , http://www.flipkart.com"
+
+r5 = re.compile("http://www\.[a-z0-9]+\.[a-z]+")
+
+l5 = re.findall(r5,s5)
+print(l5)
+
+for value in l5:
+    s5 = s5.replace(value,"<a href='{}'>{}</a>".format(value,value))
+print(s5)

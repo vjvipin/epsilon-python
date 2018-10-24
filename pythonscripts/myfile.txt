@@ -1,7 +1,5 @@
-Hi This is the content in my file.
-Adding some more things in file 2 
-Adding some more things in file 3
-Adding some more things in file 4
-Adding some more things in file 5
-Adding some more things in file 6
-Adding some more things in file 
+ My line number is 0
+ My line number is 21
+ My line number is 43
+ My line number is 65
+ My line number is 87

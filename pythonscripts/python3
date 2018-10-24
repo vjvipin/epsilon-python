@@ -1,0 +1,11 @@
+vowels = "aeiou"
+
+mystring = "I work at Epsilon !!!"
+
+for i in mystring:
+	if(i in vowels):
+		myvowels += i
+	else:
+		myconsonants +=i
+
+

@@ -6,22 +6,33 @@ class Complex():
 
     def printcomplex(self):
         print (self.real,"+ i",self.img)
+    def __add__(self, other):
+        print ("Within Addition method")
+        real1 = self.real + other.real
+        img1 = self.img + other.img
+        Z = Complex(real1,img1)
+        return Z
+    def __str__(self):
+        # return '%d + i %d' % (self.real, self.img)
+        return str(self.real) + '+ i' + str(self.img) 
+
+
+
+        # return Complex(self.real + other.real,
+        #                self.img + other.img)
 
 X = Complex(3,4)
+Y = Complex(5,6)
 
 X.printcomplex();
+Y.printcomplex();
 
-#    def __add__(self, other):
-#        print ("Within Addition method")
-#        real1 = self.real + other.real
-#        img1 = self.img + other.img
-#        Z = Complex(real1,img1)
-#        return Z
-#        # return Complex(self.real + other.real,
-#        #                self.img + other.img)
-#    def __str__(self):
-#        # return '%d + i %d' % (self.real, self.img)
-#        return str(self.real) + '+ i' + str(self.img) 
+#print(help(X))
+Z = X + Y
+print(Z)
+
+print(dir(1))
+
 #
 #
 #    def __sub__(self, other):

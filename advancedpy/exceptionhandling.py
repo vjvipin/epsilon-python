@@ -1,4 +1,5 @@
 #exceptions:
+'''
 a = [1]
 try :
 	print(a)
@@ -27,8 +28,9 @@ def func(a,b):
 #	print (a)
 
 func(2,1)
-# creating your own exception
 '''
+# creating your own exception
+
 class myException(RuntimeError):
 	def __init__(self, arg):
 		self.arg=arg
@@ -37,9 +39,10 @@ class myException(RuntimeError):
 
 try:
 	a=6
-	if a==6:
-		b=input("enter")
-		raise myException(b)
-except myException, e:
+	if (a==6):
+		#b=input("enter")
+		#b= 5 
+		raise myException(a)
+except myException as e :
 	print("raised an exception with value = ", e.arg)
-'''
+
