@@ -2,7 +2,7 @@
 import MySQLdb
 
 # Open database connection
-db = MySQLdb.connect("zekeserver.ctxzguosahx8.ap-south-1.rds.amazonaws.com","user","zeketraining","ashishdb")
+db = MySQLdb.connect("zekeserver.cra1n4auudcc.ap-southeast-1.rds.amazonaws.com","user","zeketraining","zekedb")
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
@@ -17,16 +17,18 @@ cursor = db.cursor()
 #cursor.execute(sql)
 #
 # execute SQL query using execute() method.
-#sql = """INSERT INTO EMPLOYEE1(FIRST_NAME,
-#         LAST_NAME, AGE, SEX, INCOME)
-#         VALUES ('Prithvi', 'M', 25, 'M', 6000)"""
+sql = """INSERT INTO EMPLOYEE1(FIRST_NAME,
+         LAST_NAME, AGE, SEX, INCOME)
+         VALUES ('Prithvi', 'M', 25, 'M', 6000)"""
 
 #sql = """ DELETE FROM EMPLOYEE1 WHERE FIRST_NAME = "Prithvi" """
-#cursor.execute(sql)
-#db.commit()
+cursor.execute(sql)
+db.commit()
 
-sql = "SELECT * FROM EMPLOYEE \
-       WHERE INCOME > '%d'" % (1000)
+
+sql = "SELECT * FROM EMPLOYEE1"
+#sql = "SELECT * FROM EMPLOYEE \
+#       WHERE INCOME > '%d'" % (1000)
 #sql = getquery()
 
 try:
